@@ -7,7 +7,8 @@
 - Im Terminal deines Raspberrys: ```git clone git@github.com:hierDeinGithubUsername/BinaryCounter.git```
 
 ## Programmierung
-Auf Basis des existierenden Code-Gerüstes soll ein Modulo-16-Zähler programmiert werden. 
+Auf Basis des existierenden Code-Gerüstes soll ein Modulo-16-Zähler programmiert werden, der den Zählerstand im grafischen
+Widget und über die LEDs am Zusatzboard anzeigt.
 
 Spezifikationen:
 - Druck auf Taster GPIO17: erhöhe Zählerstand um 1
