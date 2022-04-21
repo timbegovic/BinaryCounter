@@ -16,7 +16,7 @@ Spezifikationen:
 - Der Zählvorgang wird durch die fallende Flanke beim Drücken des Tasters ausgelöst. Längeres Drücken löst keinen weiteren Zählvorgang aus.
 - Der Zähler soll von 0 bis 15 zählen. Auf den Höchstwert 15 folgt wieder 0. Beim Abwärtszählen folgt auf 0 der Wert 15.
 - Anzeige des Zählerstandes im Widget durch QLCDNumber dezimal.
-- Anzeige des Zählerstandes am Zusatzboard: dual über die 4 LEDS  (GPIO18 = MSB, GPIO25 = LSB)
+- Anzeige des Zählerstandes am Zusatzboard: dual über die 4 LEDs (GPIO18 = MSB, GPIO25 = LSB)
 - Ein funktionsfähiges Beispielprogramm ist unter ```bin/BinaryCounter``` zu finden.
 
 ## Abgabe
