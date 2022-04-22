@@ -22,12 +22,28 @@ CounterWidget::CounterWidget(QWidget *parent)
 
 CounterWidget::~CounterWidget()
 {
-
+    for(int i = 0; i < 4; i++)
+            m_gpio.set(LEDS[i], (m_num >> i) & 0b1);
 }
 
 // Zaehlerstand im Widget und dual ueber LEDs anzeigen:
 void CounterWidget::updateCounter()
 {
+
+     if(m_gpio.isActivated(BUTTONS[2]))
+                    m_num = (m_num + 1) & 0xF;
+
+     if(m_gpio.isActivated(BUTTONS[0]))
+                    m_num = (m_num - 1) & 0xF;
+
+     if(m_gpio.isActivated(BUTTONS[1]))
+                    m_num = 0;
+
+
+     m_lcd->display(m_num);
+     updateLEDs();
+
+
 
 
 }
