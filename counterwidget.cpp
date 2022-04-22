@@ -11,7 +11,9 @@ CounterWidget::CounterWidget(QWidget *parent)
     setLayout(layout);
 
     // QLCDNumber zur Anzeige des Zaehlerstandes dezimal:
-
+    m_lcd = new QLCDNumber(2);
+    layout->addWidget(m_lcd);
+    m_lcd->display_(m_num);
 
 
     connect(&m_timer, &QTimer::timeout, this, &CounterWidget::updateCounter);
